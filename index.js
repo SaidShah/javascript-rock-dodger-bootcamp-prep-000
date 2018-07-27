@@ -134,7 +134,7 @@ function endGame() {
   
   clearInterval(gameInterval)
   while(ROCKS.length>0){
-  GAME.removeChild(ROCKS)
+  GAME.removeChild(rock)
    ROCKS.shift()
    
   }
