@@ -125,6 +125,7 @@ function createRock(x) {
  */
 function endGame() {
   
+  if(ROCKS.length)
   clearInterval(gameInterval)
   
   
