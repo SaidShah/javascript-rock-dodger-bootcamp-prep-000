@@ -134,7 +134,7 @@ function endGame() {
   
   clearInterval(gameInterval)
   while(ROCKS.length>0){
-   ROCKS.pop()
+   ROCKS.shift()
    GAME.removeChild(ROCKS[0])
   }
   window.removeEventListener(`keydown`,moveDodger)
