@@ -125,8 +125,14 @@ function createRock(x) {
  */
 function endGame() {
   
-  if(ROCKS.length)
+  
   clearInterval(gameInterval)
+  while(ROCKS.length>0){
+    GAME.removeChild(ROCKS[0])
+    ROCKS.shift()
+  }
+  window.removeEventListener(`keydown`,moveDodger)
+  alert("YOU LOSE!")
   
   
 }
