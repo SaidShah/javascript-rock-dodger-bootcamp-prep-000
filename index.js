@@ -164,7 +164,7 @@ function moveDodgerLeft() {
    */
    var moveLeft = positionToInteger(DODGER.style.left)
    if(moveLeft>0){
-     DODGER.style.left=`${moveLeft-=4}px`
+     DODGER.style.left=`${moveLeft-4}px`
      window.requestAnimationFrame(moveDodgerLeft)
    }
    
@@ -179,7 +179,7 @@ function moveDodgerRight() {
    */
    var moveRight = positionToInteger(DODGER.style.left)
    if(moveRight<GAME_WIDTH-40){
-     DODGER.style.left=`${moveRight+=2}px`
+     DODGER.style.left=`${moveRight+4}px`
      window.requestAnimationFrame(moveDodgerRight)
    }
    
