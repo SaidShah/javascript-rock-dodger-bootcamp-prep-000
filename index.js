@@ -64,12 +64,12 @@ function createRock(x) {
   var top = 0
 
   rock.style.top = top
-  GAME.appendChild(rock)
+  
   /**
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
    */
-  
+  GAME.appendChild(rock)
 
   /**
    * This function moves the rock. (2 pixels at a time
@@ -86,6 +86,12 @@ function createRock(x) {
      rock.style.top = `${top+=2}px`
      if(checkCollision(rock)){
        return endGame()
+     }
+     
+     if(top<GAME_HEIGHT){
+       window.requestAnimationFrame(moveRock)
+     }else{
+       rock.remove()
      }
 
     /**
