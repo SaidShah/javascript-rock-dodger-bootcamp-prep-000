@@ -133,10 +133,9 @@ function endGame() {
   
   
   clearInterval(gameInterval)
-  while(ROCKS.length>0){
-  GAME.removeChild(rock)
-   ROCKS.shift()
-   
+  for(let i =0;i<ROCKS.length;i++){
+    GAME.removeChild(ROCKS[i])
+    ROCKS.shift()
   }
   window.removeEventListener(`keydown`,moveDodger)
   alert("YOU LOSE!")
