@@ -131,12 +131,12 @@ function createRock(x) {
  */
 function endGame() {
   
-  while(ROCKS.length>0){
+ 
+  clearInterval(gameInterval)
+ while(ROCKS.length>0){
      ROCKS.shift()
 
   }
-  clearInterval(gameInterval)
-
   window.removeEventListener(`keydown`,moveDodger)
   alert("YOU LOSE!")
   
